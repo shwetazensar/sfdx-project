@@ -1,0 +1,18 @@
+p{
+    color:indigo;
+    background-color: aqua;
+    font-size: xx-large;
+}
+
+:host{
+    color:maroon;
+    font-size: x-large;
+    font-style: italic;
+}
+
+img{
+    border-radius: 50%;
+    border: 5px solid gray;
+    height: 200px;
+    width: 200px;
+}

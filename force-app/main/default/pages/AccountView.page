@@ -1,0 +1,12 @@
+<apex:page standardController="Account">
+    <h1>Account Details</h1>
+    <apex:form >
+        <apex:outputField value="{!Account.Name}" label="Name"/>
+        <br/>
+        <apex:outputField value="{!Account.Industry}" label="Industry"/>
+        <br/>
+        <apex:outputField value="{!Account.Phone}" label="Phone"/>
+        <br/>
+        <apex:outputField value="{!Account.Website}" label="Website"/>
+    </apex:form>
+</apex:page>

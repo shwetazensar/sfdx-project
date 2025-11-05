@@ -1,0 +1,8 @@
+<apex:page standardController="Account">
+    <h1>Opportunities for this Account</h1>
+    <apex:form >
+        <p><strong>Account Name:</strong> {!Account.Name}</p>
+        <p><strong>Industry:</strong> {!Account.Industry}</p>
+    </apex:form>
+    <apex:relatedList list="Opportunities"/>
+</apex:page>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Product List" icon-name="utility:retail_execution">
+        <div class="slds-grid slds-wrap slds-m-around_medium">
+            <template for:each={products} for:item="product">
+                <div key={product.id} class="slds-col slds-size_1-of-3 slds-p-around_small">
+                    <c-product-card product-info={product}></c-product-card>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

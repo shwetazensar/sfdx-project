@@ -1,0 +1,9 @@
+<template>
+    <template iterator:it={cityList}>
+        <p key={it.value} class={it.value.className}>
+            {it.index}. {it.value.name}
+        </p>
+    </template>
+    <lightning-input type="Text" value= {FirstCity} onchange={handleChange}></lightning-input>
+    <h1>{FirstCity}</h1>
+</template>

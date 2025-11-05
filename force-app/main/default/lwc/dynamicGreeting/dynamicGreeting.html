@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Dynamic Greeting">
+        <div class="slds-m-around_medium" data-id ="greetingBox">
+            <p style="padding: 10px" >Hello, {greeting}! This is the {color} greeting.</p>
+            
+            <lightning-input 
+                label="Enter your name" 
+                value={greeting} 
+                onchange={handleChange}
+                style="padding: 10px">
+            </lightning-input>
+            
+            <lightning-input 
+                type="text" 
+                label="Choose a color" 
+                value={color} 
+                onchange={handleColor}
+                style="padding: 10px">
+            </lightning-input>
+        </div>
+    </lightning-card>
+</template>

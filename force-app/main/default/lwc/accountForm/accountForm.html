@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="LDS Forms"></lightning-card>
+    <lightning-layout>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-record-edit-form
+                record-id={recordId} 
+                object-api-name="Account"
+                onsuccess={successHandler}>
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Phone"></lightning-input-field>
+                <lightning-input-field field-name="Website"></lightning-input-field>
+                <lightning-button type="submit" label="Save"></lightning-button>
+            </lightning-record-edit-form>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-record-view-form
+                record-id={recordId} object-api-name="Account">
+                <lightning-output-field field-name="Name"></lightning-output-field>
+                <lightning-output-field field-name="Phone"></lightning-output-field>
+                <lightning-output-field field-name="Website"></lightning-output-field>
+            </lightning-record-view-form>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

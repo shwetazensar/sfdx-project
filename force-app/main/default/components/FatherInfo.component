@@ -1,0 +1,7 @@
+<apex:component >
+    <apex:attribute name="Father" type="Father__c" description="sssss" required="True">
+    </apex:attribute>
+    <p>
+        name : {! Father.name}
+    </p>
+</apex:component>

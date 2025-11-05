@@ -1,0 +1,63 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-card title="Create a New Record" icon-name="standard:account">
+                <div class="slds-var-m-around_medium">
+                      <p>
+                        <lightning-input type="text" label="Account Name"
+                         onchange={handleNameChange}></lightning-input>
+                    </p>
+                    <p>
+                        <lightning-input type="phone" label="Account Phone" onchange={handlePhoneChange} ></lightning-input>
+                    </p>
+                    <p>
+                        <lightning-input type="url" label="Account Website" onchange={handleUrlChange} ></lightning-input>
+                    </p>
+                    <p>
+                        <lightning-button label="Create Account" onclick={createAccount} variant="brand"></lightning-button>
+                    </p>
+                    <p>
+                        <lightning-button label="Delete Account" onclick={deleteAccount} variant="brand"></lightning-button>
+                    </p>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-card title={retAccountName} icon-name="standard:account">
+                <div class="slds-var-m-around_medium">
+                      <p>
+                        <lightning-formatted-text value={retAccountName}>
+                        </lightning-formatted-text>
+                    </p>
+                    <p>
+                        <lightning-formatted-phone value={retAccountPhone}></lightning-formatted-phone>
+                    </p>
+                    <p>
+                        <lightning-formatted-url value={retAccountWebsite}></lightning-formatted-url>
+                    </p>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <lightning-card title="Update a Record" icon-name="standard:account">
+                <div class="slds-var-m-around_medium">
+                    <p>
+                        <lightning-input type="text" label="Account Name"
+                         onchange={handleNameChange}></lightning-input>
+                    </p>
+                    <p>
+                        <lightning-input type="phone" label="Account Phone" onchange={handlePhoneChange} ></lightning-input>    
+                    </p>
+                    <p>
+                        <lightning-input type="url" label="Account Website" onchange={handleUrlChange} ></lightning-input>
+                        
+                    </p>
+                    <p>
+                        <lightning-button label="Update Account" onclick={updateAccount} variant="brand"></lightning-button>
+                    </p>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>   
+        
+    </lightning-layout>
+</template>

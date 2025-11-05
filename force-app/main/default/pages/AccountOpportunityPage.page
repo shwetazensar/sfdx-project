@@ -1,0 +1,12 @@
+<apex:page controller="AccountOpportunityController">
+    <h1>Accounts and Their Opportunities</h1>
+    <apex:repeat value="{!accounts}" var="acc">
+        <h2>{!acc.Name} - {!acc.Industry}</h2>
+        <apex:dataTable value="{!acc.Opportunities}" var="opp">
+            <apex:column value="{!opp.Name}" headerValue="Opportunity Name"/>
+            <apex:column value="{!opp.StageName}" headerValue="Stage"/>
+            <apex:column value="{!opp.Amount}" headerValue="Amount"/>
+        </apex:dataTable>
+        <hr/>
+    </apex:repeat>
+</apex:page>

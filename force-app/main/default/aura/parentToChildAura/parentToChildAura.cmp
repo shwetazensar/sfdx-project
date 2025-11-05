@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="message" type="String" />
+
+    <lightning:input label="Enter message" value="{!v.message}" />
+    <lightning:button label="Submit" onclick="{!c.handleClick}" />
+
+    <c:childLwcComp aura:id="childLwcComp" />
+</aura:component>

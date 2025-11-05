@@ -1,0 +1,14 @@
+<apex:page standardController="Father__c" >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <c:FatherInfo father="{!Father__c}"/>
+            <p>
+                DOB : {! Father__c.DOB__c}
+            </p>
+            <p>
+            <apex:relatedList list="children__r">
+            </apex:relatedList>
+            </p>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,41 @@
+<template>
+  <lightning-card title="Dashboard"></lightning-card>
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-size_1-of-3">
+      <div class="slds-card slds-p-around_medium">
+        <h2 class="slds-text-heading_small">Total Accounts</h2>
+        <p class="slds-text-heading_medium">{totalAccounts}</p>
+      </div>
+    </div>
+    <div class="slds-col slds-size_1-of-3">
+      <div class="slds-card slds-p-around_medium">
+        <h2 class="slds-text-heading_small">Total Contacts</h2>
+        <p class="slds-text-heading_medium">{totalContacts}</p>
+      </div>
+    </div>
+    <div class="slds-col slds-size_1-of-3">
+      <div class="slds-card slds-p-around_medium">
+        <h2 class="slds-text-heading_small">Open Opportunities</h2>
+        <p class="slds-text-heading_medium">{openOpportunities}</p>
+      </div>
+    </div>
+    <!-- data table -->
+    <div class="slds-col slds-size_1_of-1 slds-m-top_large">
+     <lightning-datatable
+        key-field="Id"
+        data={visibleAccounts}
+        columns={columns}
+        hide-checkbox-column="true"
+        onsort={handleSort}
+        sorted-by={sortedBy}
+        sorted-direction={sortedDirection}>
+      </lightning-datatable>
+    </div>
+
+    <!-- pagingation -->
+     <div class="slds-m-top_medium slds-align_absolute-center">
+        <lightning-button label="Previous" disabled={isFirstPage} onclick={handlePrevious}></lightning-button>
+        <lightning-button label="Next" disabled={isLastPage} onclick={handleNext}></lightning-button>
+     </div>
+  </div>
+</template>

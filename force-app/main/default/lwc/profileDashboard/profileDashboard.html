@@ -1,0 +1,19 @@
+<template>
+    <c-profile-card name="Shweta Yenaji" title="Jr. Software Engineer">
+        <!-- Unnamed slot content -->
+        <p>Passionate about clean code and UI design.</p>
+
+        <!-- Named slot content -->
+        <div slot="actions">
+            <lightning-button label="View Profile" onclick={handleView} style="background-color: red;"></lightning-button>
+            <lightning-button label="Message" onclick={handleView} style="background-color: red;"></lightning-button>
+        </div>
+    </c-profile-card>
+
+    <c-profile-card name="Bharat Jhaveri" title="Manager">
+        <p>Experienced in leading agile teams and delivering scalable solutions.</p>
+        <div slot="actions">
+            <lightning-button label="Portfolio" onclick={handleMessage}></lightning-button>
+        </div>
+    </c-profile-card>
+</template>

@@ -1,0 +1,17 @@
+lightning-card{
+    color:darkred;
+}
+
+div{
+    background-color: lightpink;
+    border-radius: 10px;
+    margin: 10%;
+    padding: 10%;
+}
+
+p{
+    
+    color:firebrick;
+    font-size:15px;
+    margin-bottom: 10%;
+}

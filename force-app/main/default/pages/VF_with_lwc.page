@@ -1,0 +1,34 @@
+<apex:page >
+    <!-- Includes the LWC for Visualforce Javascript library, lighting.out.js
+     from the correct domain. -->
+    <apex:includeLightning />
+ 
+    <!-- Import slds -->
+    <apex:slds />
+ 
+    <div class="slds-box slds-m-left_x-small" id="lightningDivI"></div>
+    <div class="slds-box slds-m-left_x-small" id="lightningDivII"></div>
+    <div class="slds-box slds-m-left_x-small" id="lightningDivIII"></div>
+ 
+    <script>
+        $Lightning.use('c:lcvfAuraApp', function () {
+ 
+            $Lightning.createComponent('lightning:button', { label: 'Press Me!' },
+                'lightningDivI', function (cmp) {
+                    console.log('lightning:button was created!');
+                });
+ 
+            $Lightning.createComponent('c:lcvfAuraComp', { VFPageValue: 'Lightning out is an amazing feature!' },
+            'lightningDivII', function (cmp) {
+                console.log('c:lcvfComp was created!');
+                console.log(cmp.get('v.VFPageValue'));
+            });
+
+            $Lightning.createComponent('c:greetComp', { name: 'Amartya' },
+            'lightningDivIII', function (cmp) {
+                console.log('c:greetComp was created!');
+                console.log(cmp.get('v.name'));
+            });
+        })
+    </script>
+</apex:page>

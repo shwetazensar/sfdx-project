@@ -1,0 +1,26 @@
+<apex:page Title="Employee Details" >
+    <apex:pageBlock Title="Employee Profile">
+        <apex:pageBlockSection Title="Personal Information">
+            <apex:outputLabel value="Name"></apex:outputLabel>            
+            <apex:outputText value="{! $user.Firstname} {! $user.LastName}"></apex:outputText> 
+            <apex:outputLabel value="Date of Birth"></apex:outputLabel>            
+            <apex:outputText value="23/11/2003"></apex:outputText> 
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection Title="Job Information">
+            <apex:outputLabel value="Designation"></apex:outputLabel>            
+            <apex:outputText value="Junior Software Developer"></apex:outputText> 
+            <apex:outputLabel value="Department"></apex:outputLabel>            
+            <apex:outputText value="IT"></apex:outputText> 
+        </apex:pageBlockSection>
+        <apex:pageBlockSection Title="Contact and Joining Information">
+            <apex:outputLabel value="Email"></apex:outputLabel>
+            <apex:outputText value="{! $user.email}"></apex:outputText>
+            <apex:outputLabel value="Phone"></apex:outputLabel>            
+            <apex:outputText value="7867452399"></apex:outputText> 
+            <apex:outputLabel value="Date of Joining"></apex:outputLabel>            
+            <apex:outputText value="{!Today()}"></apex:outputText>   
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+</apex:page>

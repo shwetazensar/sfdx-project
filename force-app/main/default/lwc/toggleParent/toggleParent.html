@@ -1,0 +1,7 @@
+<template>
+    <p>Hii! This is parent component</p>
+    <lightning-input type="text" label="Enter Message" value={message} onchange={handleChange}></lightning-input>
+    <lightning-button label="Toggle Child" onclick={handleClick}></lightning-button>
+    <c-toggle-child></c-toggle-child>
+
+</template>

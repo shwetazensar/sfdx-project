@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="message" type="string"></aura:attribute>
+    <c:lwcChild onmessage="{!c.messageHandler}"></c:lwcChild>
+    <p>Your message is : {!v.message}</p>
+</aura:component>

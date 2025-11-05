@@ -1,0 +1,8 @@
+<template>
+    <input type="checkbox" onclick={handleClick} >Click to see
+    <template if:true={displayDiv}>
+        <template iterator:its={cities}>
+            <p key={its.value}>{its.value}</p>
+        </template>
+    </template>
+</template>

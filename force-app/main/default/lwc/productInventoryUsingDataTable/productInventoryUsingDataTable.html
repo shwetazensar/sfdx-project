@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-m-around_medium">
+    <lightning-card title="Product Inventory" icon-name="custom:custom14"></lightning-card>
+    <lightning-input label="Search" type="search" onchange={handleChange}></lightning-input>
+    <lightning-button label="Search" variant="brand" onclick={handleSearch}></lightning-button>
+     </div>
+     
+    <lightning-datatable
+        key-field="id"
+        data={ProductsToDisplay}
+        columns={columns}
+        onsort={handleSort}
+        sorted-by={sortedBy}
+        sorted-direction={sortedDirection}>
+        >
+    </lightning-datatable>
+</template>

@@ -1,0 +1,16 @@
+<apex:page controller="CreateOpportunityController">
+    <apex:form >
+        <apex:pageBlock title="Create New Opportunity">
+            <apex:pageMessages />
+
+            <apex:pageBlockSection columns="2">
+                <apex:inputField value="{!opportunity.Name}" label="Opportunity Name"/>
+                <apex:inputField value="{!opportunity.StageName}" label="Stage"/>
+                <apex:inputField value="{!opportunity.CloseDate}" label="Close Date"/>
+                <apex:inputField value="{!opportunity.Amount}" label="Amount"/>
+                <apex:inputField value="{!opportunity.AccountId}" label="Account"/>
+            </apex:pageBlockSection>
+            <apex:commandButton value="Save" action="{!save}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

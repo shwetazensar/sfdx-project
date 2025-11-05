@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Child Component" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <p>This is a child component.</p>
+            <lightning-input type="text" label="Enter your message" value={message} onchange={handleNameChange}></lightning-input>
+            <lightning-button label="Submit" onclick={handleSubmit}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

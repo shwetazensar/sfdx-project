@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Record Stats Utility">
+        <div class="slds-p-horizontal_medium">
+            <lightning-combobox
+                name="objectSelector"
+                label="Select Object"
+                value={selectedObject}
+                options={objectOptions}
+                onchange={handleObjectChange}>
+            </lightning-combobox>
+
+            <template if:true={statsAvailable}>
+                <p>Total Records: {totalRecords}</p>
+                <template for:each={statusBreakdown} for:item="item">
+                    <p key={item.status}>{item.status}: {item.count}</p>
+                </template>
+            </template>
+
+            <lightning-button
+                label="Refresh"
+                onclick={handleRefresh}
+                class="slds-m-top_medium">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

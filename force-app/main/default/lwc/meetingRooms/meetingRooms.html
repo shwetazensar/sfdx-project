@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Meeting Rooms Available" icon-name="utility:event">
+        <p if:false={meetingRooms.length} style="font-size:x-large"> No rooms Available!!</p>
+        <lightning-layout multiple-rows="false" horizontal-align="start">
+            <template for:each={meetingRooms} for:item="meetingRoom">
+                <lightning-layout-item key={meetingRoom.name} padding="around-small" size="2">
+                    <c-meeting-room meeting-room={meetingRoom}>
+                    </c-meeting-room>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+
+        <lightning-card title ="Booked Meeting Rooms" icon-name="utility:event"  ></lightning-card>
+        <p if:false={bookedMeetingRooms.length} style="font-size:x-large"> No rooms booked!!</p>
+        <lightning-layout if:true={bookedMeetingRooms.length} multiple-rows="false" horizontal-align="start" pull-to-boundary="small">
+            <template for:each={bookedMeetingRooms} for:item="meetingRoom">
+                <lightning-layout-item key={meetingRoom.name} padding="around-small" size="2">
+                    <c-meeting-room class="booking" meeting-room={meetingRoom} is-booked>
+                    </c-meeting-room>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </lightning-card>
+
+</template>

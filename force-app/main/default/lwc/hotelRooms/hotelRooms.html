@@ -1,0 +1,37 @@
+<!-- <template>
+    <template for:each={hotelRooms} for:item="hotelRoom">
+        <c-hotel-room key={hotelRoom} hotel-room={hotelRoom} show-room>        
+        </c-hotel-room>
+    </template>
+</template> -->
+
+<template>
+    <lightning-card title="Hotel Rooms"></lightning-card>
+    <lightning-layout>
+        <lightning-layout-item size="4">    
+            <ul>
+                <template for:each={hotelRooms} for:item="room">
+                    <li key={room}>
+                        <c-hotel-room
+                        hotel-room={room} show-room ontileclick={tileClickHandler} >
+                        </c-hotel-room>
+                    </li>
+                </template>
+            </ul>
+        </lightning-layout-item>
+        <lightning-layout-item size="8">    
+            <!-- <p class="pClass">Just to say Hi!</p> -->
+             <h1>Room Name: {selectedHotelRoom.roomName}</h1>
+             <h3>Room Price: {selectedHotelRoom.roomPrice}</h3>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
+
+<!-- <template>
+    <template for:each={hotelRooms} for:item="hotelRoom">
+        <c-hotel-room key={hotelRoom} hotel-room={hotelRoom} show-room> 
+             <p>{hotelRoom.roomName}</p>
+             <p>{hotelRoom.roomPrice}</p>        
+        </c-hotel-room>
+    </template>
+</template> -->

@@ -1,0 +1,10 @@
+<apex:page standardController="Book__c">
+    <apex:pageBlock >
+    <apex:pageBlockSection title="Book Info" columns="2">
+           <apex:outputField label="Book Name" value="{!Book__c.Name}"/>
+           <apex:outputField label="Quantity" value="{!Book__c.Quantity__c}"/>
+           <apex:outputField label="Genre" value="{!Book__c.Genre__c}"/>
+           <apex:outputField label="Description" value="{!Book__c.Description__c}"/>
+      </apex:pageBlockSection>
+     </apex:pageBlock>
+</apex:page>

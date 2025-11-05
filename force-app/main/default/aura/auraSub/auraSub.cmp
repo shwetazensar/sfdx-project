@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="message" type="string" />
+    <c:pubSubAuraLwc aura:id="pubSubAuraLwc" onready="{!c.subscribeToEvent}" />
+    <p>{!v.message}</p>
+</aura:component>

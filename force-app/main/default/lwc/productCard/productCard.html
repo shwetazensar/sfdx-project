@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title={productInfo.productName} icon-name="utility:product">
+        <div class="slds-m-around_medium">
+            <p>
+                <b>Product:</b> {productInfo.productName}
+            </p>
+            <p>
+                <lightning-input
+                    label="Price"
+                    type="number"
+                    value={productInfo.productPrice}
+                    onchange={handlePriceChange}
+                ></lightning-input>
+            </p>
+            <p>
+                {productInfo.productPrice}
+            </p>
+        </div>
+    </lightning-card>
+</template>

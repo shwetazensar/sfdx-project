@@ -1,0 +1,13 @@
+.first-city {
+    color: green;
+    font-weight: bold;
+}
+
+.last-city {
+    color: red;
+    font-style: italic;
+}
+
+.normal-city {
+    color: black;
+}

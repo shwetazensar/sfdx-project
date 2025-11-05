@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="Employee Search">
+    <div class="slds-p-horizontal_medium">
+      <lightning-input
+        type="text"
+        label="Search by name"
+        onchange={handleSearchEmployee}>
+      </lightning-input>
+
+      <template if:true={List}>
+        <ul class="slds-list_dotted slds-m-top_medium">
+          <template for:each={List} for:item="emp">
+            <li key={emp.id}>{emp.name}</li>
+          </template>
+        </ul>
+      </template>
+
+      <template if:true={noResults}>
+        <p class="slds-text-color_error slds-m-top_medium">No matching employees found.</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <div>
+        <lightning-input type="text" label="Color" value={value} onchange={handleChange}></lightning-input>
+        <lightning-button label="Send" onclick={sendValue}></lightning-button>
+        <p>In parent Component</p>
+        <p>{value}</p>
+        <br><br>
+        <c-public-method-child ></c-public-method-child>
+    </div>
+    
+</template>

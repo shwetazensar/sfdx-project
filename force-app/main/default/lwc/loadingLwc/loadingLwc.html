@@ -1,0 +1,8 @@
+<template >
+    <template if:true={loading}>
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    </template>
+    <template if:false={loading}>
+        <p>Welcome to Salesforce!</p>
+    </template>
+</template>

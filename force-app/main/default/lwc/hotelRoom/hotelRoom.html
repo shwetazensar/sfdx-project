@@ -1,0 +1,14 @@
+<template>
+    <template if:true={showRoom}>
+        <lightning-tile label={hotelRoom.roomName}
+            onclick={selectTileHandler}>
+        <p>{hotelRoom.roomPrice}</p>
+        </lightning-tile>
+    </template>
+</template>
+
+<!-- <template>
+    <template if:true={showRoom}>
+        <slot></slot>
+    </template>
+</template> -->

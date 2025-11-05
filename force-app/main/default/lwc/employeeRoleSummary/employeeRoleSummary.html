@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Employee Role Summary">
+    <div class="slds-p-horizontal_medium">
+      <template for:each={summary} for:item="item">
+        <p key={item.role}>{item.role}: {item.count}</p>
+      </template>
+
+      <template if:true={noData}>
+        <p>No employee data available.</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

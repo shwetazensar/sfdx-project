@@ -1,0 +1,14 @@
+<template>
+    <div class="actions">
+        <h3>{name}</h3>
+        <p>{title}</p>
+
+        <!-- Unnamed slot for bio/description -->
+        <slot></slot>
+
+        <!-- Named slot for actions -->
+        <div class="actions">
+            <slot name="actions"></slot>
+        </div>
+    </div>
+</template>

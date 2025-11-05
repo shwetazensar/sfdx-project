@@ -1,0 +1,24 @@
+<template>
+    <lightning-input type="checkbox" label="Show Movie List" onchange={handleCheckboxChange}></lightning-input>
+    <lightning-layout>
+        <lightning-layout-item size="6">
+            <div class="slds-m-around_medium">    
+            <template if:true={showMovieList}>
+                <template for:each={movies} for:item="movie">
+                    <c-movie key={movie.name} movie={movie}></c-movie>
+                </template>
+            </template>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+            <div class="slds-m-around_medium"> 
+            <h1> Selected Movie</h1>
+            <template if:true={selectedMovie}>
+                <p>{selectedMovie}</p>
+                <p>{selectedReleaseYear}</p>
+                <p>{selectedGenre}</p>
+            </template>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>     
+</template>
