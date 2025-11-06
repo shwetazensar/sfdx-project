@@ -5,7 +5,7 @@ export default class Movie extends LightningElement {
     movie = {
         name: 'The Shawshank Redemption',
         releaseYear: 1994,
-        genre: 'Drama'
+        Genre: 'Drama'
     };
 
     handleClick() {
