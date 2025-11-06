@@ -30,7 +30,7 @@ jobs:
          git reset authUrl.txt  # Unstage the secret file
          git diff-index --quiet HEAD || git commit -m "Auto-commit: New changes detected"
          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/shwetazensar/sfdx-project.git
-         git push origin main
+         git push origin master
        continue-on-error: true
  
      - name: 🚀 Deploy to Salesforce
