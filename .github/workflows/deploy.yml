@@ -1,4 +1,3 @@
-Create .github/workflows/deploy.yml with the following:
 name: Salesforce CI/CD
  
 on:
