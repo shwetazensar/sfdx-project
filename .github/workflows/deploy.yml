@@ -3,7 +3,7 @@ name: Salesforce CI/CD
 on:
  push:
    branches:
-     - main
+     - master
  
 jobs:
  deploy:
@@ -24,7 +24,7 @@ jobs:
  
      - name: 📦 Auto-commit changes (if any)
        run: |
-         git config --global user.email "shweta.yenaji@zenasr.com"
+         git config --global user.email "shweta.yenaji@zensar.com"
          git config --global user.name "shwetayenaji"
          git add --all
          git reset authUrl.txt  # Unstage the secret file
