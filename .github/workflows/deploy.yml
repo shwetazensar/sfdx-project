@@ -1,1 +1,39 @@
-
+Create .github/workflows/deploy.yml with the following:
+name: Salesforce CI/CD
+ 
+on:
+ push:
+   branches:
+     - main
+ 
+jobs:
+ deploy:
+   runs-on: ubuntu-latest
+ 
+   steps:
+     - name: 📥 Checkout code
+       uses: actions/checkout@v3
+ 
+     - name: 🛠 Install Salesforce CLI
+       run: npm install -g sfdx-cli
+ 
+     - name: 🔐 Authenticate Dev Hub
+       run: |
+         echo "${{ secrets.SFDX_AUTH_URL_DEVHUB }}" > authUrl.txt
+         cat authUrl.txt  # Optional debug
+         sfdx force:auth:sfdxurl:store -f authUrl.txt -a DevHub
+ 
+     - name: 📦 Auto-commit changes (if any)
+       run: |
+         git config --global user.email "shweta.yenaji@zenasr.com"
+         git config --global user.name "shwetayenaji"
+         git add --all
+         git reset authUrl.txt  # Unstage the secret file
+         git diff-index --quiet HEAD || git commit -m "Auto-commit: New changes detected"
+         git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/shwetazensar/sfdx-project.git
+         git push origin main
+       continue-on-error: true
+ 
+     - name: 🚀 Deploy to Salesforce
+       run: |
+           sfdx force:source:deploy -p force-app -u DevHub --testlevel RunLocalTests
